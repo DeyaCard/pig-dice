@@ -1,10 +1,18 @@
 //Business Logic
 
+//Game Constructor
+function Game(playerOne, playerTwo, turnScoreTotal, turn, winner) {
+  this.playerOne = playerOne;
+  this.playerTwo = playerTwo;
+  this.turnScoreTotal = turnScoreTotal;
+  this.turn = turn;
+  this.winner = winner;
+}
+
 
 //Players
-function Player() {
-  this.totalScore = 0;
-  this.roundScore = 0;
+function Player(score) {
+  this.score = 0;
 }
 
 
@@ -14,30 +22,31 @@ function PigDice() {
   this.player2 = new Player();
 }
 
+//Roll Dice
+Player.prototype.diceRoll = function() {
+  let sides = 6;
+  return Math.floor(Math.random() * this.sides) + 1;
+}
 
-//Start Game
+
+//add to turn score total - unheld (unsolidified points - could roll 1)
 
 
-//Hold
+
+
+//add turn to total score - HOLD (decide to end turn)
+
+
+
+//switch turn - roll 1
+
 
 
 //Reset
 
 
-//Roll Dice object
-//dice.roll(); <------how to call roll function
-let dice = {
-  sides: 6,
-  roll: function() {
-    let randomNumber = Math.floor(Math.random() * this.sides) + 1;
-    return randomNumber;
-  }
-}
 
-
-
-// 
-//Winner
+//Winner scores 100
 
 
 
